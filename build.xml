@@ -40,4 +40,9 @@
 	     />
     </target>
 
+    <target name="dist" depends="make_dist" >
+		<delete file="eagledns/dist/zip/eagledns.zip" />
+		<zip destfile="eagledns/dist/zip/eagledns.zip" basedir="eagledns/dist/" excludes="*.svn, zip, make_dist.xml, zip_dist.xml" />
+     </target>
+
 </project>
