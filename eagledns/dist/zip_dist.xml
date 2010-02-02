@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="zipdist" name="ZIP dist">
+
+	<target name="zipdist">
+		<delete file="zip/eagledns.zip" />
+		<zip destfile="zip/eagledns.zip" basedir="." excludes="*.svn, zip, make_dist.xml, zip_dist.xml" />
+	</target>
+	
+</project>

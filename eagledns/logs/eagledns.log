@@ -1,0 +1,135 @@
+[FATAL] [2010-01-29] [13:03:16] EagleDNS.<init> Eagle DNS 1.0 starting...
+[DEBUG] [2010-01-29] [13:03:16] EagleDNS.<init> Parsing config file...
+[DEBUG] [2010-01-29] [13:03:16] EagleDNS.<init> No addresses found in config, listening on all addresses (0.0.0.0)
+[DEBUG] [2010-01-29] [13:03:16] EagleDNS.<init> Setting TCP thread pool size to 20
+[DEBUG] [2010-01-29] [13:03:16] EagleDNS.<init> Setting TCP thread pool shutdown timeout to 20 seconds
+[DEBUG] [2010-01-29] [13:03:16] EagleDNS.<init> Setting UDP thread pool size to 20
+[DEBUG] [2010-01-29] [13:03:16] EagleDNS.<init> Setting UDP thread pool shutdown timeout to 20 seconds
+[DEBUG] [2010-01-29] [13:03:16] EagleDNS.<init> Remote management password set to secret
+[DEBUG] [2010-01-29] [13:03:16] EagleDNS.<init> Remote management port set to 5353
+[DEBUG] [2010-01-29] [13:03:16] EagleDNS.<init> Setting AXFR timeout to 30
+[DEBUG] [2010-01-29] [13:03:16] EagleDNS.<init> Instantiating zone provider Default DB zone provider (se.unlogic.eagledns.zoneproviders.db.DBZoneProvider)
+[DEBUG] [2010-01-29] [13:03:17] EagleDNS.<init> Zone provider Default DB zone provider successfully instantiated
+[DEBUG] [2010-01-29] [13:03:17] EagleDNS.<init> Found value com.mysql.jdbc.Driver for property driver
+[DEBUG] [2010-01-29] [13:03:17] EagleDNS.<init> Setting property driver
+[DEBUG] [2010-01-29] [13:03:17] EagleDNS.<init> Found value root for property username
+[DEBUG] [2010-01-29] [13:03:17] EagleDNS.<init> Setting property username
+[DEBUG] [2010-01-29] [13:03:17] EagleDNS.<init> Found value root for property password
+[DEBUG] [2010-01-29] [13:03:17] EagleDNS.<init> Setting property password
+[DEBUG] [2010-01-29] [13:03:17] EagleDNS.<init> Found value jdbc:mysql://localhost:3306/eagledns for property url
+[DEBUG] [2010-01-29] [13:03:17] EagleDNS.<init> Setting property url
+[INFO] [2010-01-29] [13:03:17] EagleDNS.<init> Zone provider Default DB zone provider (se.unlogic.eagledns.zoneproviders.db.DBZoneProvider) successfully initialized!
+[INFO] [2010-01-29] [13:03:17] EagleDNS.reloadZones Getting primary zones from zone provider Default DB zone provider
+[ERROR] [2010-01-29] [13:03:17] DBZoneProvider.getPrimaryZones Error getting primary zones from DB zone provider Default DB zone provider
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2214)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:781)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:284)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at se.unlogic.standardutils.dao.SimpleDataSource.getConnection(SimpleDataSource.java:30)
+	at se.unlogic.standardutils.dao.AnnotatedDAO.getAll(AnnotatedDAO.java:1346)
+	at se.unlogic.eagledns.zoneproviders.db.DBZoneProvider.getPrimaryZones(DBZoneProvider.java:81)
+	at se.unlogic.eagledns.EagleDNS.reloadZones(EagleDNS.java:472)
+	at se.unlogic.eagledns.EagleDNS.<init>(EagleDNS.java:322)
+	at se.unlogic.eagledns.EagleDNS.main(EagleDNS.java:963)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:343)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2137)
+	... 17 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:432)
+	at java.net.Socket.connect(Socket.java:525)
+	at java.net.Socket.connect(Socket.java:475)
+	at java.net.Socket.<init>(Socket.java:372)
+	at java.net.Socket.<init>(Socket.java:215)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:292)
+	... 18 more
+[INFO] [2010-01-29] [13:03:17] EagleDNS.reloadZones Getting secondary zones from zone provider Default DB zone provider
+[ERROR] [2010-01-29] [13:03:17] DBZoneProvider.getSecondaryZones Error getting secondary zones from DB zone provider Default DB zone provider
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2214)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:781)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:284)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at se.unlogic.standardutils.dao.SimpleDataSource.getConnection(SimpleDataSource.java:30)
+	at se.unlogic.standardutils.dao.AnnotatedDAO.getAll(AnnotatedDAO.java:1346)
+	at se.unlogic.eagledns.zoneproviders.db.DBZoneProvider.getSecondaryZones(DBZoneProvider.java:112)
+	at se.unlogic.eagledns.EagleDNS.reloadZones(EagleDNS.java:495)
+	at se.unlogic.eagledns.EagleDNS.<init>(EagleDNS.java:322)
+	at se.unlogic.eagledns.EagleDNS.main(EagleDNS.java:963)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:343)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2137)
+	... 17 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:432)
+	at java.net.Socket.connect(Socket.java:525)
+	at java.net.Socket.connect(Socket.java:475)
+	at java.net.Socket.<init>(Socket.java:372)
+	at java.net.Socket.<init>(Socket.java:215)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:253)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:292)
+	... 18 more
+[INFO] [2010-01-29] [13:03:17] EagleDNS.<init> Starting remote interface on port 5353
+[INFO] [2010-01-29] [13:03:17] EagleDNS.<init> Initializing TCP thread pool...
+[INFO] [2010-01-29] [13:03:17] EagleDNS.<init> Initializing UDP thread pool...
+[ERROR] [2010-01-29] [13:03:17] EagleDNS.<init> Unable to open UDP server socket on address /0.0.0.0:53, java.net.BindException: Permission denied
+[ERROR] [2010-01-29] [13:03:17] EagleDNS.<init> Unable to open TCP server socket on address /0.0.0.0:53, java.net.BindException: Permission denied
+[FATAL] [2010-01-29] [13:03:17] EagleDNS.<init> Not bound on any sockets, aborting startup!

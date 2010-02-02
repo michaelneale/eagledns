@@ -1,0 +1,39 @@
+#!/bin/bash
+#
+# chkconfig: - 11 89
+# description: Eagle DNS a Java based authoritative DNS server.
+
+
+start() {
+	cd /storage/applications/eagledns/
+	su eagledns -c ./start.sh &
+	echo $! > /var/run/eagledns.pid
+}
+
+stop() {
+	cd /storage/applications/eagledns/
+	su eagledns -c ./stop.sh && rm -rf /var/run/eagledns.pid
+}
+
+reload() {
+	cd /storage/applications/eagledns/
+	su eagledns -c ./reload.sh
+}	
+
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	reload)
+		reload
+		;;
+	*)
+        	echo "Usage: $0 {start|stop|restart}"
+		exit 1
+		;;
+esac
+
+exit $?

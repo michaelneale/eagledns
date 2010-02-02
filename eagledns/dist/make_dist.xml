@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="make_dist" name="Create Runnable Jar for Project EagleDNS with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="make_dist">
+        <delete dir="eagledns/lib"/>
+        <mkdir dir="eagledns/lib"/>    	
+        <jar destfile="eagledns/lib/eagledns.jar">
+            <manifest>
+                <attribute name="Main-Class" value="se.unlogic.eagledns.EagleDNS"/>
+                <attribute name="Class-Path" value=". log4j-1.2.15.jar dnsjava-2.0.8.jar mysql-connector-java-5.1.10-bin.jar"/>
+            </manifest>
+            <fileset dir="../bin"/>
+            <fileset dir="../../StandardUtils/bin"/>
+        </jar>
+        <copy file="../../Log4j/lib/log4j-1.2.15.jar" todir="eagledns/lib/"/>
+        <copy file="../lib/dnsjava-2.0.8.jar" todir="eagledns/lib/"/>
+        <copy file="../lib/mysql-connector-java-5.1.10-bin.jar" todir="eagledns/lib/"/>
+    	
+    	<delete file="eagledns/docs/notice.txt"/>
+    	<copy file="../src/META-INF/notice.txt" todir="eagledns/docs/"/>
+    	
+    	<delete file="eagledns/docs/license.txt"/>
+    	<copy file="../src/META-INF/license.txt" todir="eagledns/docs/"/>
+    </target>
+</project>

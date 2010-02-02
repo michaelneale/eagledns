@@ -1,0 +1,78 @@
+[FATAL] [2010-01-29] [16:07:26] EagleDNS.<init> Eagle DNS 1.0 starting...
+[INFO] [2010-01-29] [16:07:26] EagleDNS.<init> Zone provider Default file zone provider (se.unlogic.eagledns.zoneproviders.file.FileZoneProvider) successfully initialized!
+[INFO] [2010-01-29] [16:07:26] EagleDNS.reloadZones Getting primary zones from zone provider Default file zone provider
+[ERROR] [2010-01-29] [16:07:26] FileZoneProvider.getPrimaryZones FileZoneProvider Default file zone provider unable to parse zone file .svn
+org.xbill.DNS.TextParseException: '.svn': invalid empty label
+	at org.xbill.DNS.Name.parseException(Name.java:172)
+	at org.xbill.DNS.Name.<init>(Name.java:251)
+	at org.xbill.DNS.Name.fromString(Name.java:306)
+	at se.unlogic.eagledns.zoneproviders.file.FileZoneProvider.getPrimaryZones(FileZoneProvider.java:114)
+	at se.unlogic.eagledns.EagleDNS.reloadZones(EagleDNS.java:479)
+	at se.unlogic.eagledns.EagleDNS.<init>(EagleDNS.java:329)
+	at se.unlogic.eagledns.EagleDNS.main(EagleDNS.java:970)
+[INFO] [2010-01-29] [16:07:26] EagleDNS.reloadZones Got zone samplezone.org.
+[INFO] [2010-01-29] [16:07:26] EagleDNS.reloadZones Getting secondary zones from zone provider Default file zone provider
+[INFO] [2010-01-29] [16:07:26] EagleDNS.<init> Starting remote interface on port 5353
+[INFO] [2010-01-29] [16:07:26] EagleDNS.<init> Initializing TCP thread pool...
+[INFO] [2010-01-29] [16:07:26] EagleDNS.<init> Initializing UDP thread pool...
+[INFO] [2010-01-29] [16:07:26] UDPSocketMonitor.run Starting UDP socket monitor on address 0.0.0.0:53
+[INFO] [2010-01-29] [16:07:26] EagleDNS.<init> Starting secondary zone update timer...
+[INFO] [2010-01-29] [16:07:26] TCPSocketMonitor.run Starting TCP socket monitor on address 0.0.0.0:53
+[FATAL] [2010-01-29] [16:07:26] EagleDNS.<init> Eagle DNS 1.0 started with 1 primary zones and 0 secondary zones
+[INFO] [2010-01-29] [16:09:39] EagleDNS.reloadZones Getting primary zones from zone provider Default file zone provider
+[ERROR] [2010-01-29] [16:09:39] FileZoneProvider.getPrimaryZones FileZoneProvider Default file zone provider unable to access zone file zones/.#samplezone.org
+[ERROR] [2010-01-29] [16:09:39] FileZoneProvider.getPrimaryZones FileZoneProvider Default file zone provider unable to parse zone file .svn
+org.xbill.DNS.TextParseException: '.svn': invalid empty label
+	at org.xbill.DNS.Name.parseException(Name.java:172)
+	at org.xbill.DNS.Name.<init>(Name.java:251)
+	at org.xbill.DNS.Name.fromString(Name.java:306)
+	at se.unlogic.eagledns.zoneproviders.file.FileZoneProvider.getPrimaryZones(FileZoneProvider.java:114)
+	at se.unlogic.eagledns.EagleDNS.reloadZones(EagleDNS.java:479)
+	at se.unlogic.eagledns.EagleDNS$1.zoneDataChanged(EagleDNS.java:299)
+	at se.unlogic.eagledns.zoneproviders.file.FileZoneProvider$1.run(FileZoneProvider.java:51)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[INFO] [2010-01-29] [16:09:39] EagleDNS.reloadZones Got zone samplezone.org.
+[INFO] [2010-01-29] [16:09:39] EagleDNS.reloadZones Getting secondary zones from zone provider Default file zone provider
+[INFO] [2010-01-29] [16:10:19] EagleDNS.reloadZones Getting primary zones from zone provider Default file zone provider
+[ERROR] [2010-01-29] [16:10:19] FileZoneProvider.getPrimaryZones FileZoneProvider Default file zone provider unable to parse zone file .svn
+org.xbill.DNS.TextParseException: '.svn': invalid empty label
+	at org.xbill.DNS.Name.parseException(Name.java:172)
+	at org.xbill.DNS.Name.<init>(Name.java:251)
+	at org.xbill.DNS.Name.fromString(Name.java:306)
+	at se.unlogic.eagledns.zoneproviders.file.FileZoneProvider.getPrimaryZones(FileZoneProvider.java:114)
+	at se.unlogic.eagledns.EagleDNS.reloadZones(EagleDNS.java:479)
+	at se.unlogic.eagledns.EagleDNS$1.zoneDataChanged(EagleDNS.java:299)
+	at se.unlogic.eagledns.zoneproviders.file.FileZoneProvider$1.run(FileZoneProvider.java:51)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[INFO] [2010-01-29] [16:10:19] EagleDNS.reloadZones Got zone samplezone.org.
+[INFO] [2010-01-29] [16:10:19] EagleDNS.reloadZones Getting secondary zones from zone provider Default file zone provider
+[FATAL] [2010-01-29] [16:11:52] EagleDNS.<init> Eagle DNS 1.0 starting...
+[INFO] [2010-01-29] [16:11:53] EagleDNS.<init> Zone provider Default file zone provider (se.unlogic.eagledns.zoneproviders.file.FileZoneProvider) successfully initialized!
+[INFO] [2010-01-29] [16:11:53] EagleDNS.reloadZones Getting primary zones from zone provider Default file zone provider
+[INFO] [2010-01-29] [16:11:53] EagleDNS.reloadZones Got zone samplezone.org.
+[INFO] [2010-01-29] [16:11:53] EagleDNS.reloadZones Getting secondary zones from zone provider Default file zone provider
+[INFO] [2010-01-29] [16:11:53] EagleDNS.<init> Starting remote interface on port 5353
+[INFO] [2010-01-29] [16:11:53] EagleDNS.<init> Initializing TCP thread pool...
+[INFO] [2010-01-29] [16:11:53] EagleDNS.<init> Initializing UDP thread pool...
+[INFO] [2010-01-29] [16:11:53] UDPSocketMonitor.run Starting UDP socket monitor on address 0.0.0.0:53
+[INFO] [2010-01-29] [16:11:53] TCPSocketMonitor.run Starting TCP socket monitor on address 0.0.0.0:53
+[INFO] [2010-01-29] [16:11:53] EagleDNS.<init> Starting secondary zone update timer...
+[FATAL] [2010-01-29] [16:11:53] EagleDNS.<init> Eagle DNS 1.0 started with 1 primary zones and 0 secondary zones
+[INFO] [2010-01-29] [16:12:06] EagleDNS.reloadZones Getting primary zones from zone provider Default file zone provider
+[INFO] [2010-01-29] [16:12:06] EagleDNS.reloadZones Got zone samplezone.org.
+[INFO] [2010-01-29] [16:12:06] EagleDNS.reloadZones Getting secondary zones from zone provider Default file zone provider
+[INFO] [2010-01-29] [16:13:06] EagleDNS.reloadZones Getting primary zones from zone provider Default file zone provider
+[ERROR] [2010-01-29] [16:13:06] FileZoneProvider.getPrimaryZones FileZoneProvider Default file zone provider unable to access zone file zones/.#samplezone.org
+[INFO] [2010-01-29] [16:13:06] EagleDNS.reloadZones Got zone samplezone.org.
+[INFO] [2010-01-29] [16:13:06] EagleDNS.reloadZones Getting secondary zones from zone provider Default file zone provider
+[INFO] [2010-01-29] [16:13:18] EagleDNS.reloadZones Getting primary zones from zone provider Default file zone provider
+[INFO] [2010-01-29] [16:13:18] EagleDNS.reloadZones Got zone samplezone.org.
+[INFO] [2010-01-29] [16:13:18] EagleDNS.reloadZones Getting secondary zones from zone provider Default file zone provider
+[INFO] [2010-01-29] [16:14:14] UDPConnection.run UDP query samplezone.org. 0 IN A from /127.0.0.1:56029
+[INFO] [2010-01-29] [16:14:36] UDPConnection.run UDP query boo.samplezone.org. 0 IN A from /127.0.0.1:62306
+[INFO] [2010-01-29] [16:14:50] EagleDNS.reloadZones Getting primary zones from zone provider Default file zone provider
+[INFO] [2010-01-29] [16:14:50] EagleDNS.reloadZones Got zone samplezone.org.
+[INFO] [2010-01-29] [16:14:50] EagleDNS.reloadZones Getting secondary zones from zone provider Default file zone provider
+[INFO] [2010-01-29] [16:15:00] UDPConnection.run UDP query wee.samplezone.org. 0 IN A from /127.0.0.1:53899
