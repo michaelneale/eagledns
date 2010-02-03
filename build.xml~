@@ -39,7 +39,7 @@
 	     destdir="StandardUtils/bin"
 	     />
       <copy file="StandardUtils/src/se/unlogic/standardutils/mime/mimetypes.properties" todir="StandardUtils/bin/se/unlogic/standardutils/mime/"/>
-      <copy file="StandardUtils/src/META-INF/MANIFEST.MF" todir="StandardUtils/bin/META-INF/" />
+
     </target>
 
     <target name="dist" depends="make_dist" >
