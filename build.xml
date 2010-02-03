@@ -24,6 +24,7 @@
     	<copy file="eagledns/src/META-INF/license.txt" todir="eagledns/dist/eagledns/docs/"/>
     </target>
     <target name="compile" depends="compile_utils">
+      <mkdir dir="eagledns/bin"/>
       <javac srcdir="eagledns/src"
 	     destdir="eagledns/bin">
 	     <classpath>
@@ -35,6 +36,7 @@
       </javac>
     </target>
     <target name="compile_utils" >
+      <mkdir dir="StandardUtils/bin"/>
       <javac srcdir="StandardUtils/src"
 	     destdir="StandardUtils/bin"
 	     />
